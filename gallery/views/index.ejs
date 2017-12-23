@@ -1,0 +1,42 @@
+<% include partials/header %>
+
+    <div id = "setMenu" class="ui fixed vertical inverted menu">
+        <!--for statment to write all possible SETS and find out which is currently active-->
+        <% sets.forEach(function(element) { %>
+            <% if(element === idSet) { %>
+                <a class="item active" href = "/<%= element %>/<%= idPlayer %>/cards"><%= element %></a>
+            <% } else { %>
+                <a class="item" href = "/<%= element %>/<%= idPlayer %>/cards"><%= element %></a>
+            <% } %>
+        <% }); %>
+    </div>
+    
+    <div id = "classMenu" class="ui fixed vertical inverted menu">
+        <!--for statment to write all possible CLASSES and find out which is currently active-->
+        <% playerClass.forEach(function(element) { %>
+            <% if(element === idPlayer) { %>
+                <a class="item active" href = "/<%= element %>/<%= idPlayer %>/cards"><%= element %></a>
+            <% } else { %>
+                <a class="item" href = "/<%= idSet %>/<%= element %>/cards"><%= element %></a>
+            <% } %>
+        <% }); %>
+    </div>
+    
+    <!-- console.log("Current set is " + id)-->
+    <div class = "ui grid container">
+        <!--Filter out attributes-->
+        <% cards.forEach(function(card) {
+            // card.playerClass
+            if (card.cost >= 0 && card.type != "Enchantment" && card.type != "Hero Power" && card.cardSet === idSet && card.playerClass === idPlayer){ %>
+                <div class = "four wide column">
+                    <div class = "image ui">
+                        <a href = "/<%= idSet %>/<%= idPlayer %>/cards/<%= card._id %> ">
+                            <img src = "<%= card.img %>" onerror="this.onerror=null;this.src='/images/blank.png';"/>
+                        </a>
+                    </div>
+                </div>
+            <% } 
+        }); %>
+    </div>
+
+<% include partials/footer %>

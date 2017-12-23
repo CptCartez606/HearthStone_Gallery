@@ -1,0 +1,49 @@
+*{
+    font-family: 'Bitter';
+}
+
+body {
+    background: url("/images/hearth_background2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size:cover
+}
+
+p {
+    text-indent: 30px;
+}
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+a img {
+    padding-right: 5px;
+    max-height: 465px;
+    width: 312px;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+div.ui.huge.header {
+    margin-top: 50px;
+}
+
+#setMenu {
+    margin-top: 150px;
+}
+
+#classMenu {
+    margin-top: 150px;
+    margin-left: 89%;
+}
+#cardInfoCss {
+    /*background-color: #FEF1D9*/
+    background-color: #ccb58e;
+    margin: auto;
+    width: 50%;
+    padding: 15px;
+}

@@ -1,0 +1,71 @@
+<% include partials/header %>
+
+<div id = "cardInfoCss">
+    <!--Back Button-->
+    <a href = "/<%= cards.cardSet%>/<%= cards.playerClass%>/cards">
+        <button class = "ui left floated black button">Back</button>
+    </a>
+    <div class="ui huge header">
+        Name: <%= cards.name %>
+    </div>
+    <hr>
+        <!--Images-->
+        <div>
+            <img src = "<%= cards.img %>" onerror="this.onerror=null;this.src='/images/blank.png';" />
+            <img src = "<%= cards.imgGold %>" onerror="this.onerror=null;this.src='/images/blank.png';" />
+        </div>
+    <!--List out all Card Info-->
+    <div class="ui list">
+        <div class="item">
+            <div class="header">Text</div>
+            <%- cards.text %>
+        </div>
+        <div class="item">
+            <div class="header">Card ID</div>
+            <%= cards.cardId %>
+        </div>
+        <div class="item">
+            <div class="header">Card Set</div>
+            <%= cards.cardSet %>
+        </div>
+        <div class="item">
+            <div class="header">Card Type</div>
+            <%= cards.type %>
+        </div>
+        <div class="item">
+            <div class="header">Faction</div>
+           <%= cards.faction %>
+        </div>
+        <div class="item">
+            <div class="header">Rarity</div>
+           <%= cards.rarity %>
+        </div>
+        <div class="item">
+            <div class="header">Cost</div>
+           <%= cards.cost %> mana
+        </div>
+        <div class="item">
+            <div class="header">Attack</div>
+           <%= cards.attack %>
+        </div>
+        <div class="item">
+            <div class="header">Health</div>
+           <%= cards.health %>
+        </div>
+        <div class="item">
+            <div class="header">Flavor</div>
+           <%= cards.flavor %>
+        </div>
+        <div class="item">
+            <div class="header">Artist</div>
+           <%= cards.artist %>
+        </div><div class="item">
+            <div class="header">Race</div>
+           <%= cards.race %>
+        </div><div class="item">
+            <div class="header">Class</div>
+           <%= cards.playerClass %>
+        </div>
+    </div>
+
+<% include partials/footer %>

@@ -1,0 +1,17 @@
+{
+  "name": "hearth_gallery",
+  "version": "1.0.0",
+  "description": "hearthstone db",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matt Cortez",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7",
+    "unirest": "^0.5.1"
+  }
+}
